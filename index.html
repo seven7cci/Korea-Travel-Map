@@ -44,6 +44,24 @@ svg.map{width:100%;height:100%;display:block;cursor:grab;background:#0b1a2b}svg.
 .ph{position:sticky;top:0;background:var(--card);display:flex;align-items:center;gap:9px;padding:14px 16px;border-bottom:1px solid var(--line)}
 .ph .pn{font-size:17px;font-weight:700}.ph .close{margin-left:auto;background:var(--card2);border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:6px 12px;cursor:pointer;font-size:13px}
 .pbody{padding:4px 16px 24px}
+/* PC(넓은 화면) 반응형 */
+@media(min-width:900px){
+ header{padding:18px 24px 0}
+ h1{font-size:22px}.sub{font-size:13px}.stat b{font-size:16px}
+ main{max-width:1120px;padding:16px 24px 80px}
+ #listPane{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;align-items:start}
+ #listPane .provhead{grid-column:1/-1}
+ .city{margin-bottom:14px}
+ .mapwrap{height:80vh}
+ .maphint{font-size:12.5px}
+ #mapPanel{left:auto;right:24px;bottom:24px;width:440px;max-height:76vh;border:1px solid var(--accent);border-radius:16px}
+ .maptools #zin{order:0}.maptools #zout{order:1}.maptools #zreset{order:2}.maptools .maphint{order:3}
+}
+@media(min-width:1300px){
+ main{max-width:1320px}
+ #listPane{grid-template-columns:1fr 1fr 1fr}
+}
+@media(hover:hover){.chip:hover,.tab:hover,.lg:hover{filter:brightness(1.18)}}
 </style></head><body>
 <header>
 <h1>🇰🇷 대한민국 시·군 여행 지도</h1>
